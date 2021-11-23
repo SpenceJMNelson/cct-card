@@ -47,7 +47,7 @@ a:link,
 a:visited,
 a:hover,
 a:active  {
-	color: #22afa9;
+	color: #ffffff;
 }
 
 
@@ -132,18 +132,10 @@ p {
 .envelope-container .top-flap,
 .envelope-container .envelope-wrapper,
 .envelope-container .envelope-back {
-	  -webkit-transition-property: -webkit-transform;
-	  transition-property: -webkit-transform;
 	  transition-property: transform;
-	  transition-property: transform, -webkit-transform;
-	  -webkit-transition-duration: 1s;
 	  transition-duration: 1s;
-	  -webkit-transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 	  transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-	  -webkit-transition-delay: initial;
 	  transition-delay: initial;
-
-	  -webkit-animation: envelopeIn 2s alternate cubic-bezier(0.87, -0.41, 0.19, 1.44);
 	  animation: envelopeIn 2s alternate cubic-bezier(0.87, -0.41, 0.19, 1.44);
 }
 
@@ -176,7 +168,6 @@ p {
 @keyframes envelopeIn {
   0% {
     opacity: 0;
-    -webkit-transform: translate(200%, 0);
     transform:  translate(200%, 0);
 	transform-origin: center;
   }
@@ -185,7 +176,6 @@ p {
   }
   100% {
     opacity: 1;
-    -webkit-transform: translate(0, 0);
     transform:  translate(0, 0);
     transform-origin: center;
   }
@@ -314,7 +304,6 @@ p {
 	  0% {
 	    transform-style: preserve-3d;
 	    transform: rotateY(20deg);
-	    -webkit-transform: rotateY(20deg);
 	  }
 	  100% {
 	  	transform-style: preserve-3d;
@@ -332,7 +321,6 @@ p {
 	  0% {
 	    transform-style: preserve-3d;
 	    transform: rotateY(20deg);
-	    -webkit-transform: rotateY(20deg);
 	  }
 	  100% {
 	  	transform-style: preserve-3d;
@@ -400,20 +388,6 @@ p {
 	    transition-duration:3s;
 	  }
 	}
-	@-webkit-keyframes reverseCard {
-	  0% {
-	    transform-style: preserve-3d;
-	    transform: rotate3d(0, 0, 0, 0deg);
-
-
-	  }
-	  100% {
-
-	    transform-style: preserve-3d;
-	    transform: rotate3d(1, 1, 0, 180deg);
-	    transition-duration:3s;
-     }
-    }
 }
 
 
@@ -432,20 +406,6 @@ p {
 	    transition-duration:3s;
 	  }
 	}
-	@-webkit-keyframes reverseCard {
-	  0% {
-	    transform-style: preserve-3d;
-	    transform: rotate3d(0, 0, 0, 0deg);
-
-
-	  }
-	  100% {
-
-	    transform-style: preserve-3d;
-	    transform: rotate3d(1, 1, 0, 180deg);
-	    transition-duration:3s;
-     }
-    }
 }
 
 
@@ -517,16 +477,8 @@ p {
 }
 
 .naimah-content.is-visible {
-
-
 	display: block;
-
 	animation: fadeIn ease-in 2.5s;
-	-webkit-animation: fadeIn ease-in 2.5s;
-	-moz-animation: fadeIn ease-in 2.5s;
-	-o-animation: fadeIn ease-in 2.5s;
-	-ms-animation: fadeIn ease-in 2.5s;
-
 }
 
 
@@ -538,12 +490,9 @@ p {
 .restart {
 	position: absolute;
 	left: 50%;
-	-webkit-transform: translate(-50%, 0);
 	transform: translate(-50%, 0);
 	bottom: 20px;
-	-webkit-animation: iconAnimation 1s infinite alternate ease-in-out;
 	animation: iconAnimation 1s infinite alternate ease-in-out;
-	-webkit-transition: opacity 0.5s ease-in-out;
 	transition: opacity 0.5s ease-in-out;
 	opacity: 1;
 	z-index: 1000;
@@ -552,9 +501,6 @@ p {
 	font-weight: bold;
 	font-size: 1.7rem;
 	color: white;
-
-
-
 }
 
 .restart.is-hidden {
@@ -623,7 +569,6 @@ p {
   width: 100%;
   height: 100%;
   box-shadow: 0 0 50px #000;
-  -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
 
@@ -756,7 +701,6 @@ p {
 }
 
 .cart-page-inside {
-  -webkit-transform: rotateY(-180deg);
   transform: rotateY(-180deg);
   border-right: none !important;
   background-position: 0px 80px;
@@ -846,6 +790,20 @@ p {
   width: 96px;
   height: 96px;
 }
+
+.click-icon-text {
+  display:block;
+  position:absolute;
+  color:#ffffff;
+  width:200px;
+  left:-50px;
+  bottom:-30px;
+  font-family: "Scout", Verdana, Arial, serif;
+  text-align:Center;
+  font-size:24px;
+  font-weight: bold;
+}
+
 @media (max-width: 767px) {
   .click-icon svg {
     width: 72px;
