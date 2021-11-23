@@ -88,7 +88,8 @@ p {
 	 margin: 0 auto;
 	 display: grid;
 	 align-items: center;
-
+   transition: 1000ms;
+   transition-delay: 0s;
 
 	  position: absolute;
 	  left: calc(50% - 350px);
@@ -151,20 +152,11 @@ p {
 	animation:
 		openFlap 2s forwards alternate ease,
 		dropEnvelopeFlap 1s forwards alternate ease-in 1.5s;
-
-
-
 }
 
 .card.top-flap-open-card {
-
 	animation: liftCardOut 2s forwards alternate ease 2s;
-
 }
-
-
-
-
 
 .envelope-wrapper.top-flap-open,
 .envelope-back.top-flap-open  {
@@ -172,6 +164,9 @@ p {
 
 }
 
+.envelope-container.is-open {
+  top: calc(50% - 100px);
+}
 
 
 
@@ -282,17 +277,6 @@ p {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
 .card {
   perspective: 1500px;
   position: absolute;
@@ -316,12 +300,10 @@ p {
 }
 
 .card.is-reversed {
-	-webkit-animation: reverseCard 2s forwards alternate  cubic-bezier(0.87, -0.41, 0.19, 1.44) 2s;
 	animation: reverseCard 2s forwards alternate cubic-bezier(0.87, -0.41, 0.19, 1.44) 2s;
 }
 
 .card.is-reversed .card-page.cart-page-outside {
-	-webkit-animation: flipCardFrontMobile 2s forwards alternate cubic-bezier(0.87, -0.41, 0.19, 1.44) 2s;
 	animation: flipCardFrontMobile 2s forwards cubic-bezier(0.87, -0.41, 0.19, 1.44) 2s;
 }
 
@@ -385,10 +367,6 @@ p {
 
     transform-style: preserve-3d;
     transform: rotate3d(0, 0, 0, 90deg);
-    -webkit-transform: rotate3d(0, 0, 0, 90deg);
-    -ms-transform: rotate3d(0, 0, 0, 90deg);
-    -moz-transform: rotate3d(0, 0, 0, 90deg);
-    -o-transform: rotate3d(0, 0, 0, 90deg);
 
 
 
@@ -399,10 +377,6 @@ p {
 
 	    transform-style: preserve-3d;
     transform: rotate3d(1, 1, 0, 180deg);
-    -webkit-transform: rotate3d(1, 1, 0, 180deg);
-    -ms-transform: rotate3d(1, 1, 0, 180deg);
-    -moz-transform: rotate3d(1, 1, 0, 180deg);
-    -o-transform: rotate3d(1, 1, 0, 180deg);
     transition-duration:3s;
 
 
@@ -418,14 +392,11 @@ p {
 	  0% {
 	    transform-style: preserve-3d;
 	    transform: rotate3d(0, 0, 0, 0deg);
-	    -webkit-transform: rotate3d(0, 0, 0, 0deg);
-
 	  }
 	  100% {
 
 	    transform-style: preserve-3d;
 	    transform: rotate3d(1, 1, 0, 180deg);
-	    -webkit-transform: rotate3d(1, 1, 0, 180deg);
 	    transition-duration:3s;
 	  }
 	}
@@ -433,7 +404,6 @@ p {
 	  0% {
 	    transform-style: preserve-3d;
 	    transform: rotate3d(0, 0, 0, 0deg);
-	    -webkit-transform: rotate3d(0, 0, 0, 0deg);
 
 
 	  }
@@ -441,7 +411,6 @@ p {
 
 	    transform-style: preserve-3d;
 	    transform: rotate3d(1, 1, 0, 180deg);
-	    -webkit-transform: rotate3d(1, 1, 0, 180deg);
 	    transition-duration:3s;
      }
     }
@@ -454,14 +423,12 @@ p {
 	  0% {
 	    transform-style: preserve-3d;
 	    transform: rotate3d(0, 0, 0, 0deg);
-	    -webkit-transform: rotate3d(0, 0, 0, 0deg);
 
 	  }
 	  100% {
 
 	    transform-style: preserve-3d;
 	    transform: rotate3d(1, 1, 0, 180deg) ;
-	    -webkit-transform: rotate3d(1, 1, 0, 180deg);
 	    transition-duration:3s;
 	  }
 	}
@@ -469,7 +436,6 @@ p {
 	  0% {
 	    transform-style: preserve-3d;
 	    transform: rotate3d(0, 0, 0, 0deg);
-	    -webkit-transform: rotate3d(0, 0, 0, 0deg);
 
 
 	  }
@@ -477,7 +443,6 @@ p {
 
 	    transform-style: preserve-3d;
 	    transform: rotate3d(1, 1, 0, 180deg);
-	    -webkit-transform: rotate3d(1, 1, 0, 180deg);
 	    transition-duration:3s;
      }
     }
@@ -513,11 +478,6 @@ p {
 
 
 
-
- 	 -moz-transform: scale(-1, 1) rotate(90deg) ;
- 	 -webkit-transform: scale(-1, 1) rotate(90deg) ;
- 	 -o-transform: scale(-1, 1) rotate(90deg);
- 	 -ms-transform: scale(-1, 1) rotate(90deg);
  	 transform: scale(-1, 1) rotate(90deg);
 
 
@@ -534,10 +494,6 @@ p {
 		margin-top: -10px;
 	    padding: 0px 0px 0 0px;
 
-		-moz-transform: scale(-1, 1) rotate(90deg) !important;
-	 	 -webkit-transform: scale(-1, 1) rotate(90deg) !important;
-	 	 -o-transform: scale(-1, 1) rotate(90deg) !important;
-	 	 -ms-transform: scale(-1, 1) rotate(90deg) !important;
 	 	 transform: scale(-1, 1) rotate(90deg) !important;
   }
 }
@@ -552,10 +508,6 @@ p {
 		margin-top: -10px;
 	    padding: 0px 0px 0 0px;
 
-		-moz-transform: scale(-1, 1) rotate(90deg) !important;
-	 	 -webkit-transform: scale(-1, 1) rotate(90deg) !important;
-	 	 -o-transform: scale(-1, 1) rotate(90deg) !important;
-	 	 -ms-transform: scale(-1, 1) rotate(90deg) !important;
 	 	 transform: scale(-1, -) rotate(90deg) !important;
 	}
 
@@ -736,7 +688,6 @@ p {
 
 .card.is-opened {
 	display: block;
-	transform: rotate(89deg) translate(50%, 0) !important;
 	transition: all 0.5s ease-in-out ;
 }
 
@@ -770,7 +721,6 @@ p {
 .cart-page-outside,
 .cart-page-inside {
   position: absolute;
-  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
@@ -791,25 +741,11 @@ p {
 .cart-page-bottom {
   background-color: #d4d1d0;
   background-image: url("images/paper-fibers.png");
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
-  display: -moz-flex;
   display: flex;
-  -webkit-box-pack: center;
   box-pack: center;
-  -moz-justify-content: center;
-  -ms-justify-content: center;
-  -o-justify-content: center;
   justify-content: center;
-  -ms-flex-pack: center;
-  -webkit-box-align: center;
   box-align: center;
-  -moz-align-items: center;
-  -ms-align-items: center;
-  -o-align-items: center;
   align-items: center;
-  -ms-flex-align: center;
   text-align: center;
 }
 @media (max-width: 767px) {
@@ -865,7 +801,6 @@ p {
 
 .cart-page-top-message,
 .cart-page-bottom-message {
-  -webkit-transform: rotate(-90deg);
   transform: rotate(-90deg);
 }
 .merry-christmas svg {
@@ -901,12 +836,9 @@ p {
 .click-icon {
   position: absolute;
   left: 50%;
-  -webkit-transform: translate(-50%, 0);
   transform: translate(-50%, 0);
   bottom: 90px;
-  -webkit-animation: iconAnimation 1s infinite alternate ease-in-out;
   animation: iconAnimation 1s infinite alternate ease-in-out;
-  -webkit-transition: opacity 0.5s ease-in-out;
   transition: opacity 0.5s ease-in-out;
   opacity: 1;
 }
@@ -931,54 +863,11 @@ p {
   transition-duration:1s;
 }
 
-@-webkit-keyframes iconAnimation {
-  0% {
-    -webkit-transform: translate(-50%, 0);
-    transform: translate(-50%, 0);
-  }
-  100% {
-    -webkit-transform: translate(-50%, 10px);
-    transform: translate(-50%, 10px);
-  }
-}
-
 @keyframes iconAnimation {
   0% {
-    -webkit-transform: translate(-50%, 0);
     transform: translate(-50%, 0);
   }
   100% {
-    -webkit-transform: translate(-50%, 10px);
-    transform: translate(-50%, 10px);
-  }
-}
-@-moz-keyframes iconAnimation {
-  0% {
-    -webkit-transform: translate(-50%, 0);
-    transform: translate(-50%, 0);
-  }
-  100% {
-    -webkit-transform: translate(-50%, 10px);
-    transform: translate(-50%, 10px);
-  }
-}
-@-o-keyframes iconAnimation {
-  0% {
-    -webkit-transform: translate(-50%, 0);
-    transform: translate(-50%, 0);
-  }
-  100% {
-    -webkit-transform: translate(-50%, 10px);
-    transform: translate(-50%, 10px);
-  }
-}
-@-ms-keyframes iconAnimation {
-  0% {
-    -webkit-transform: translate(-50%, 0);
-    transform: translate(-50%, 0);
-  }
-  100% {
-    -webkit-transform: translate(-50%, 10px);
     transform: translate(-50%, 10px);
   }
 }

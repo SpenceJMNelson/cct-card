@@ -8,35 +8,37 @@ $(document).ready(function() {
       $envelopeWrapper = $('.envelope-wrapper');
       $envelopeBack = $('.envelope-back');
       $merryChristmas = $('.merry-christmas');
-  
-  
-  
+      $envelopeContainer = $('.envelope-container');
+
+
+
   $openEnvelope.on('click', function() {
-	  
-	
+
+
 	$(this).toggleClass('top-flap-open');
 		$envelopeWrapper.toggleClass('top-flap-open');
 		$envelopeBack.toggleClass('top-flap-open');
 		$card.toggleClass('top-flap-open-card');
 
+
 	});
-	
-	
-	
+
+
+
 	$card.on('click', function() {
-		
+
 		$(this).toggleClass('is-opened');
 		$clickMe.toggleClass('is-hidden');
-
+    $envelopeContainer.toggleClass('is-open');
 
 
 	});
-	
+
   $reverse.on('click', function() {
-	  
+
 		//$('.card').toggleClass('top-flap-open-card');
 
-		
+
 		$('.card').toggleClass('is-reversed');
 		$('.cart-page-bottom-message').toggleClass('is-hidden');
 		$('.naimah-content').toggleClass('is-visible');
@@ -46,11 +48,11 @@ $(document).ready(function() {
 
 
 	});
-	
-	
+
+
 	/*
 		$restart.on('click', function() {
-	  
+
 		$('.card').toggleClass('is-reversed');
 		$('.cart-page-bottom-message').toggleClass('is-hidden');
 		$('.naimah-content').toggleClass('is-visible');
@@ -59,7 +61,7 @@ $(document).ready(function() {
 
 	});
 	*/
-	
+
 
 });
 
