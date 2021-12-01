@@ -1,15 +1,8 @@
 /*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.3.6,
-* Autoprefixer: v10.3.1
-* Browsers: >1%
-*/
-
-/*
 	removed roboto and converted scout to a webfont at https://transfonter.org
 
 
-	@import url("https://fonts.googleapis.com/css?family=Roboto&subset=latin-ext");
+	@import url("https://fonts.googleapis.com/css?family=Roboto&amp;subset=latin-ext");
 * {
   box-sizing: border-box;
 }
@@ -691,8 +684,7 @@ p {
 .cart-page-outside,
 .cart-page-inside {
   position: absolute;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .cart-page-outside {

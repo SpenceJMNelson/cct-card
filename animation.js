@@ -9,16 +9,17 @@ $(document).ready(function() {
       $envelopeBack = $('.envelope-back');
       $merryChristmas = $('.merry-christmas');
       $envelopeContainer = $('.envelope-container');
+      $closeModal = $('.modal-closelink');
 
 
 
   $openEnvelope.on('click', function() {
 
 
-	$(this).toggleClass('top-flap-open');
-		$envelopeWrapper.toggleClass('top-flap-open');
-		$envelopeBack.toggleClass('top-flap-open');
-		$card.toggleClass('top-flap-open-card');
+	$(this).addClass('top-flap-open');
+		$envelopeWrapper.addClass('top-flap-open');
+		$envelopeBack.addClass('top-flap-open');
+		$card.addClass('top-flap-open-card');
 
 
 	});
@@ -27,27 +28,24 @@ $(document).ready(function() {
 
 	$card.on('click', function() {
 
-		$(this).toggleClass('is-opened');
-		$clickMe.toggleClass('is-hidden');
-    $envelopeContainer.toggleClass('is-open');
-
+		$(this).addClass('is-opened');
+		$clickMe.addClass('is-hidden');
+    $envelopeContainer.addClass('is-open');
+    $restart.removeClass('is-hidden').addClass('is-visible');
 
 	});
 
   $reverse.on('click', function() {
 
-		//$('.card').toggleClass('top-flap-open-card');
-
-
-		$('.card').toggleClass('is-reversed');
-		$('.cart-page-bottom-message').toggleClass('is-hidden');
-		$('.naimah-content').toggleClass('is-visible');
-	    $clickMe.toggleClass('is-hidden');
-	    $restart.toggleClass('is-hidden');
-	    $('.merry-christmas').toggleClass('fade-out');
-
+		$('.artist-content').addClass('is-visible');
 
 	});
+
+  $closeModal.on('click', function() {
+
+    $('.artist-content').removeClass('is-visible');
+
+  });
 
 
 	/*
@@ -55,7 +53,7 @@ $(document).ready(function() {
 
 		$('.card').toggleClass('is-reversed');
 		$('.cart-page-bottom-message').toggleClass('is-hidden');
-		$('.naimah-content').toggleClass('is-visible');
+		$('.artist-content').toggleClass('is-visible');
 	    $clickMe.toggleClass('is-hidden');
 		$restart.toggleClass('is-hidden');
 
