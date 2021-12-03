@@ -312,7 +312,7 @@ p {
 
   .envelope-container.is-open {
     top: calc(50% - 100px);
-    transform:rotate(0deg);
+    transform:rotate(90deg);
   }
 
 }
