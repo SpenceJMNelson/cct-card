@@ -147,8 +147,31 @@ p {
 
 .envelope-container.is-open {
   top: calc(50% - 100px);
-  transform:rotate(90deg);
 }
+
+/* Safari 11+ */
+@media not all and (min-resolution:.001dpcm)
+{ @supports (-webkit-appearance:none) and (stroke-color:transparent) {
+  .envelope-container.is-open {
+  transform:rotate(90deg);
+  }
+}}
+
+/* Safari 10.1 */
+@media not all and (min-resolution:.001dpcm){
+@supports (-webkit-appearance:none) and (not (stroke-color:transparent)) {
+  .envelope-container.is-open {
+  transform:rotate(90deg);
+  }
+}}
+
+/* Safari 6.1-10.0 (but not 10.1) */
+@media screen and (min-color-index:0) and(-webkit-min-device-pixel-ratio:0){
+@media {
+  .envelope-container.is-open {
+  transform:rotate(90deg);
+  }
+}}
 
 
 
@@ -312,7 +335,6 @@ p {
 
   .envelope-container.is-open {
     top: calc(50% - 100px);
-    transform:rotate(90deg);
   }
 
 }
