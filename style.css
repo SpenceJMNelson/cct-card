@@ -149,6 +149,13 @@ p {
   top: calc(50% - 100px);
 }
 
+@media (min-width: 768px) {
+
+  .envelope-container.is-open {
+  transform:rotate(90deg);
+  }
+	}
+
 /* Safari 11+ */
 @media not all and (min-resolution:.001dpcm)
 { @supports (-webkit-appearance:none) and (stroke-color:transparent) {
